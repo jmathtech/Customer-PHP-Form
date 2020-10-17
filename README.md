@@ -2,12 +2,12 @@
 A customer form written in PHP.
 
 ### How to install
-* Need a SQL server to install the 'customers.sql file in the repository
+* First, you will need a SQL server to import the 'customers.sql file found in the repository.
 * Open the 'cusSubmit.php' file to enter your database information in the mysqli_connect on line 13.
 ```php
 $con = mysqli_connect("localhost", "root", "", "CIS224_php");
 ```
-* Upload the files to your FTP or type in localhost:PORT 
+* Upload the files to your FTP or type in localhost:PORT.
 * Find the 'cusForm.php' in your directory.
 
 
