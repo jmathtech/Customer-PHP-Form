@@ -38,8 +38,8 @@ else
 ```
 * Closing and securing the database connection after a new record has been initiated.
 ```php
+mysqli_close($con);
 
-	mysqli_close($con);
 ```
 
 ### Example Screenshots
