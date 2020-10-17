@@ -4,7 +4,7 @@ A customer form written in PHP.
 ### What I've learned
 * Using variables in PHP to connect to the SQL database.
 ```php
-  $firstName = $_POST["fn"];  
+ 	$firstName = $_POST["fn"];  
 	$lastName = $_POST["ln"];  
 	$email = $_POST["em"];
 	$address = $_POST["ad"];
@@ -14,27 +14,26 @@ A customer form written in PHP.
 * 'INSERT INTO' is used input those variables onto the customers table.
 ```php
 $sql = "INSERT INTO customers (FirstName, LastName, Email, Address)
-		VALUES('$firstName', '$lastName', '$email', '$address')";
+	VALUES('$firstName', '$lastName', '$email', '$address')";
 ```
 * Create an error message if the data fails to connect to the SQL database
 ```php
-
 if(!$con)
-		{
-			die("Connection unsuccessful: " . mysql_error());
-			// stops the program if the connection is unsuccessful and displays the error message.
-		}
+	{
+	die("Connection unsuccessful: " . mysql_error());
+	// stops the program if the connection is unsuccessful and displays the error message.
+	}
 ```
-
+* If the connection is successful, then the php script will echo "System Updated!". If the connection is unsuccessful, I have added an error handler.
 ```php
 if(mysqli_query($con, $sql)) // function that runs the query. Needs the two arguments.
-		{
-			echo "System updated!";
-		}
-	else 
-		{
-			echo "Error!" . mysqli_error($con);
-		}
+	{
+	echo "System updated!";
+	}
+else 
+	{
+	echo "Error!" . mysqli_error($con);
+	}
 	
 ```
 * Closing and securing the database connection after a new record has been initiated.
